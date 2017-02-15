@@ -1,0 +1,20 @@
+{
+  "name": "sgarrity",
+  "version": "1.0.0",
+  "description": "sgarrity.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shanedgarrity@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11",
+    "html-loader": "^0.4.4",
+    "webpack": "^2.2.1",
+    "webpack-stream": "^3.2.0"
+  }
+}
