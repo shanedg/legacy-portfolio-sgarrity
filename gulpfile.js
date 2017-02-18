@@ -1,52 +1,39 @@
 var gulp = require('gulp');
 var watch = require('gulp-watch');
+var sync = require('browser-sync').create();
 
-var browserSync = require('browser-sync').create();
 
-// var browserify = require('browserify');
-// var path = require('path');
-// var webpack = require('webpack-stream');
-// var WebpackDevServer = require("webpack-dev-server");
 
-gulp.task('live', function() {
+/*
+  Initialize browser-sync server and watch dist/ directory.
+*/
+gulp.task('init-live', function() {
 
-  browserSync.init({
-    server: './dist'
+  sync.init({
+    server: {
+      baseDir: "dist/"
+    }
   });
 
-  gulp.src('src/*.html')
-    .pipe(gulp.dest('dist/'));
-  
-  gulp.watch('src/*').on('change', function() {
-
-    gulp.src('src/*')
-    .pipe(gulp.dest('dist/'));
-
-    browserSync.reload();
-
-  });
+  gulp.watch('dist/**', sync.reload);
 
 });
 
-gulp.task('default', function() {
 
-  console.log('gulp!');
 
-  // var 
-  // return watch('src/*', function() {
+/*
+  Return stream of changes to src/ directory, pipe changes to dist/.
+*/
+gulp.task('watch-src', ['init-live'], function() {
 
-  //   gulp.src('src/*.html')
-  //   // .pipe(webpack({
-  //   //   watch: true,
-  //   //   module: {
-  //   //     loaders: [{
-  //   //       test: /\.html$/,
-  //   //       loader: "html-loader"
-  //   //     }]
-  //   //   }
-  //   // }))
-  //   .pipe(gulp.dest('dist/'));
-
-  // });
+  return watch('src/**', { ignoreInitial: false })
+    .pipe(gulp.dest('dist/'));
 
 });
+
+
+
+/*
+  Run init-live and watch-src tasks.
+*/
+gulp.task('default', ['init-live','watch-src']);
