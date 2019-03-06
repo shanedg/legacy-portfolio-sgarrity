@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box !important;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+
+}
+article {
+  padding: 0 0.25rem 0 0.75rem;
+  margin: 0 auto;
+}
+section {
+  box-sizing: border-box;
+}
+h1,
+h2 {
+  letter-spacing: 0.25rem;
+}
+h3,
+h4 {
+  letter-spacing: 0.125rem;
+  padding: 0 0.5rem;
+
+}
+ul {
+  padding: 0 0 0 1.125rem;
+}
+ul li {
+  letter-spacing: 0.125rem;
+  list-style-type: none;
+  padding: 0 0 0.5rem 0;
+}
+.filter {
+  text-align: right;
+}
+.filter p {
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+}
+.filter p:after {
+  content: "_";
+  font-weight: normal;
+}
+.filter p:last-child:after {
+  content: " ";
+}
+ul.skills {
+  padding-bottom: 0.75rem;
+}
+.skills li,
+.degree {
+  font-style: italic;
+}
+span.disclaim {
+  color: lightgray;
+}
+span.position {
+  text-transform: uppercase;
+}
+span.when {
+  display: block;
+}
+span.when:before {
+  content: "[ ";
+  font-weight: bold;
+}
+span.when:after {
+  content: " ]";
+  font-weight: bold;
+}
+.fa-envelope {
+  /*color: skyblue;*/
+  color: #000;
+}
+.fa-envelope:hover {
+  /*color: lightblue;*/
+  color: lightgray;
+}
+
+section > ul {
+  transition: all linear 250ms;
+}
+
+.hidden {
+  display: none;
+}
+.active {
+  display: block;
+}
+
+
+
+@media screen and (min-width: 375px) {
+
+  article {
+    width: 90%;
+  }
+
+}
+
+
+
+@media screen and (min-width: 425px) {
+
+  article {
+    width: 70%;
+  }
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+  article {
+    width: 55%;
+  }
+
+}

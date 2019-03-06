@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <style>
+
+
+    * {
+      box-sizing: border-box !important;
+    }
+
+    .main-wrap {
+
+    }
+
+    .logo {
+      display: inline-block;
+      max-width: 15%;
+    }
+
+    .top-nav nav ul {
+      list-style-type: none;
+
+    }
+    .top-nav nav ul li {
+      display: inline-block;
+      width: auto;
+    }
+
+
+    h1 {
+      color: red;
+      text-transform: uppercase;
+    }
+
+    span.blue-highlight {
+      color: lightblue;
+      text-transform: uppercase;
+    }
+
+    select {
+      display: inline-block;
+      width: 20%;
+      padding: 0.5rem 1.5rem;
+
+    }
+
+    .category-contain {
+
+      padding: 1rem;
+      font-size: 0;
+      line-height: 0;
+
+    }
+
+    .category-contain .tile {
+
+      display: inline-block;
+      margin: 0.5rem;
+      width: 32%;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      background: green;
+
+    }
+
+    .category-contain .tile:first-child {
+      width: 100%;
+    }
+
+    </style>
+  </head>
+  <body>
+
+  <section class="top-nav">
+
+    <div class="logo">
+      <a href="#">
+        <img src="" alt="AppBoy" >
+      </a>
+
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Resources</a></li>
+        <li class="login"><a href="#">Log In</a></li>
+        <li class="contact"><a href="#">Contact</a></li>
+
+      </ul>
+    </nav>
+  </section>
+
+  <section class="main-wrap">
+
+    <h1>Mobile Marketing Resources</h1>
+
+    <p><span class="blue-hilight">// WHETHER ...</span> or just ...</p>
+
+    <p>Our core... <span class="blue-hilight">We're here to help</span></p>
+
+    <select id="cat-select" name="categories">
+      <option selected value="all">All Categories</option>
+      <option value="a">A</option>
+      <option value="b">B</option>
+
+      <option value="c">C</option>
+
+    </select>
+
+    <div class="category-contain">
+
+      <div class="tile a" id="tile-01">
+        <a href="#">
+          <h3 class="category">A</h3>
+          <h2 class="title">Sample TItle1</h2>
+        </a>
+      </div>
+
+      <div class="tile b" id="tile-02">
+        <a href="#">
+          <h3 class="category">B</h3>
+          <h2 class="title">Sample TItle2</h2>
+        </a>
+      </div>
+
+      <div class="tile c" id="tile-03">
+        <a href="#">
+          <h3 class="category">C</h3>
+          <h2 class="title">Sample TItle3</h2>
+        </a>
+      </div>
+
+      <div class="tile a" id="tile-04">
+        <a href="#">
+          <h3 class="category">A</h3>
+          <h2 class="title">Sample TItle4</h2>
+        </a>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  </body>
+
+  <script>
+
+    (function() {
+
+      var chooseCategory = function chooseCategory(event) {
+
+        console.log(event.target.value);
+
+        var all = document.querySelectorAll('.tile');
+        var i;
+        for (i = 0; i < all.length; i++) {
+
+          if (event.target.value === 'all') {
+            all[i].style.display = 'block';
+          } else {
+
+            if (all[i].className.indexOf(' ' + event.target.value) < 0) {
+              all[i].style.display = 'none';
+
+            } else {
+
+              all[i].style.display = 'block';
+            }
+
+          }
+
+          
+        }
+
+      };
+
+      document.querySelector('#cat-select').addEventListener('change', chooseCategory);
+
+
+
+    })();
+
+  </script>
+</html>

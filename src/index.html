@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- <html class="no-js" lang="en"> -->
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -8,11 +7,13 @@
         <meta name="description" content="sgarrity.com">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
-        <!-- Place favicon.ico in the root directory -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/00e129b15e.css">
 
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="css/styles.css">
+
+        <script src="js/ui.js"></script>
 
     </head>
     <body>
@@ -20,42 +21,95 @@
 
           <h1>shane garrity</h1>
           <h2>hey hello</h2>
-          
-          <section class="education">
-            <h3>education</h3>
-            <ul class="pitt">
-
-              <h4>University of Pittsburgh</h4>
-              <ul class="pitt">
-                <li class="item">Dietrich School of Arts & Sciences, '14</li>
-                <li class="item">BS in Computer Science</li>
-              </ul>
-            </ul>
-
-          </section>
 
           <section class="work">
             <h3>work</h3>
             <ul>
 
-              <h4>DICK'S Sporting Goods</h4>
-              <ul class="dicks">
-                <li class="item">Associate Front-End Web Developer</li>
-              </ul>
-              <ul class="dicks">
-                <li class="item">Web Developer Intern</li>
-              </ul>
-              <h4>Bayer R&I (MEDRAD)</h4>
-              <ul class="medrad">
-                <li class="item">Software Engineer Intern</li>
-              </ul>
+              <h4>DICK'S Sporting Goods, eCommerce | Coraopolis, Pa</h4>
 
+              <ul class="dicks">
+                <li class="item"><i class="fa fa-plus" aria-hidden="true"></i><span class="position">Web Developer</span> <span class="when">October '16 &ndash; present</span></li>
+                <ul class="skills">
+
+                  <li>Lead developer on AngularJS (1.x) product selector application; hosted on AWS ES3/Cloudfront and continuously integrated via CodePipeline; Agile/Scrum workflow.</li>
+                  <li>Building out A/B testing campaigns with Adobe Target as part of the Site Optimization Group; operationalizing winning experiences.</li>
+                  <li>Lead developer on site traffic & analytics data dashboard for Analytics team within Site Optimization; React (JSX) single page application, hosted on/CI via AWS.</li>
+                  <li>Lead developer integrating Oracle RightNow Chat Cloud Service (JavaScript) into eCommerce storefronts; UI/UX customization across multiple sites.</li>
+                </ul>
+              </ul>
+              <ul class="dicks">
+                <li class="item"><i class="fa fa-plus" aria-hidden="true"></i><span class="position">Associate Web Developer</span> <span class="when">June '14 &ndash; October '16</span></li>
+                <ul class="skills">
+                  <li>Responsible for GolfGalaxy storefront content updates, including development of responsive, custom landing pages; latest web standards, HTML5/CSS3/ES5+; progressive enhancement, polyfills for older browsers.</li>
+                  <li>Converted primarily adaptive content on DicksSportingGoods and GolfGalaxy storefronts to responsive and migrated to new WebSphere Commerce CMS as part of years-long eCommerce re-platforming & in-sourcing project.</li>
+                  <li>Wrote and executed UAT scripts for my team’s tools and processes; worked with IT support, back-end developers, and third-party vendors to triage and resolve defects ahead of new site launches.</li>
+                  <li>Maintained on-call availability outside of normal working hours to support high visibility campaigns and critical launches, especially holiday high-volume sales events.</li>
+                </ul>
+              </ul>
+              <ul class="dicks">
+                <li class="item"><i class="fa fa-plus" aria-hidden="true"></i><span class="position">Web Developer Intern</span> <span class="when">May &ndash; August '13</span></li>
+                <ul class="skills">
+                  <li>Prototyped and presented a desired business tool in HTML + JavaScript for use by internal teams requesting and managing updates to site content.</li>
+                </ul>
+              </ul>
+              <h4>Bayer HealthCare, Engineering, <span class="disclaim">formerly MEDRAD</span> | Indianola, Pa</h4>
+              <ul class="medrad">
+                <li class="item"><i class="fa fa-plus" aria-hidden="true"></i><span class="position">Software Engineer Intern</span> <span class="when">May &ndash; August '12</span></li>
+                <ul class="skills">
+                  <li>Wrote a desktop application in C#/.NET leveraging regular expressions to anonymize Protected Health Information in large batches of client device log files.</li>
+                </ul>
+              </ul>
+            </ul>
+          </section>
+
+          <section class="play">
+            <h3>play</h3>
+            <ul>
+              <!-- <h4></h4> -->
+              <ul>
+                <li class="item"><span class="position">Personal Study Guide Builder</span> <span class="when">August '16</span></li>
+                <ul class="skills">
+                  <li>Wrote JavaScript to scrape entries of a popular study guide site for a given list of books and plays and output customized study materials for personal use.</li>
+                </ul>
+
+                <li class="item"><span class="position no-transform">GALLERY INSTALLATION | <a href="http://unsmokeartspace.com/index/#/youu/">YOU/U</a></span> <span class="when">June '16</span></li>
+                <ul class="skills">
+                  <li>Unsmoke Systems Artspace in Braddock, Pa; speech-to-text collaboration with artist <a href="http://www.zackjohnlee.com/">Zack John Lee</a>, .whatHearYou():</li>
+                  <li>"an automatic tweeting speech-to-text machine which blends the inputs of several audio sources into a single stream of thought"; written in Java, incorporating open-source libraries for speech transcription and the Twitter API; <a href="https://twitter.com/what_hear_you">@what_hear_you</a></li>
+                </ul>
+
+                <li class="item"><span class="position">Batch processing of GIS data</span> <span class="when">July '15</span></li>
+                <ul class="skills">
+                  <li>Composed Python scripts to collate and tally several hundred thousand coded GIS records of Pittsburgh city bus stops stored across multiple CSV files.</li>
+                </ul>
+              </ul>
+              
+            </ul>
+          </section>
+
+          <section class="education">
+            <h3>school</h3>
+            <ul class="pitt">
+              <h4>University of Pittsburgh | Pittsburgh, Pa</h4>
+              <ul class="pitt">
+                <li class="item">Dietrich School of Arts &amp; Sciences, '14</li>
+                <li class="item degree bold">BS in Computer Science</li>
+                <li class="item degree">Political Science Minor</li>
+              </ul>
             </ul>
 
           </section>
 
+          <section class="contact">
+            <h3>contact</h3>
+            <ul>
+              <li><a href="mailto:shanedgarrity@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a> shanedgarrity@gmail.com</li>
+            </ul>
+          </section>
+
         </article>
 
-        <script src="js/ui.js"></script>
+
     </body>
 </html>

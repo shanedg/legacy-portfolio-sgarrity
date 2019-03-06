@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box !important;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+h1 {
+  font-weight: normal;
+  letter-spacing: 0.25rem;
+  width: 50%;
+  display: inline-block;
+}
+.nav {
+  display: inline-block;
+  width: 48%;
+  text-align: right;
+}
+.nav h2 {
+  font-weight: normal;
+}
+.nav a {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+}
+.nav a:hover {
+  text-decoration: underline
+}
+.nav a:visited {
+  color: #000;
+}
+img {
+  max-width: 100%;
+}
+.gallery {
+
+}
+.slides {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  width: 70vh;
+}
